@@ -21,7 +21,7 @@ use crate::{
 #[derive(SimpleObject)]
 #[graphql(internal, name = "_Service")]
 struct Service {
-    sdl: Option<String>,
+    pub sdl: Option<String>,
 }
 
 type BoxFieldFuture<'a> = Pin<Box<dyn Future<Output = ServerResult<(Name, Value)>> + 'a + Send>>;
