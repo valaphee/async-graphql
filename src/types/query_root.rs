@@ -14,7 +14,7 @@ use crate::{
 #[derive(SimpleObject)]
 #[graphql(internal, name = "_Service")]
 struct Service {
-    sdl: Option<String>,
+    pub sdl: Option<String>,
 }
 
 pub(crate) struct QueryRoot<T> {
